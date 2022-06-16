@@ -1,0 +1,104 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+
+    <section class="parallax-container overlay-1" data-parallax-img="{% static 'images/breadcrumbs.jpg' %}">
+        <div class="material-parallax parallax">
+            <img src="{% static 'images/breadcrumbs.jpg' %} " alt=""
+                 style="transform: translate3d(-50%, 131px, 0px); display: block;">
+        </div>
+        <div class="parallax-content breadcrumbs-custom context-dark">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-lg-9">
+                        <h2 class="breadcrumbs-custom-title">Contacts</h2>
+                        <ul class="breadcrumbs-custom-path">
+                            <li><a href="{% url 'main_page:main_page_view' %}">Home</a></li>
+                            <li class="active">Contacts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section section-lg text-center bg-default">
+        <div class="container">
+            <div class="row row-50">
+                <div class="col-md-6 col-lg-4">
+                    <div class="box-icon-classic">
+                        <div class="box-icon-inner decorate-triangle"><span
+                                class="icon-xl linearicons-phone-incoming"></span></div>
+                        <div class="box-icon-caption">
+                            <h4><a href="tel:#">1-800-123-1234</a></h4>
+                            <p>You can call us anytime</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="box-icon-classic">
+                        <div class="box-icon-inner decorate-circle"><span class="icon-xl linearicons-map2"></span></div>
+                        <div class="box-icon-caption">
+                            <h4><a href="#">51 Francis Street, San Diego, CA 91702 United States</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="box-icon-classic">
+                        <div class="box-icon-inner decorate-rectangle"><span
+                                class="icon-xl linearicons-paper-plane"></span></div>
+                        <div class="box-icon-caption">
+                            <h4><a href="mailto:#">info@demolink.org</a></h4>
+                            <p>Feel free to email us your questions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-lg bg-gray-1 text-center">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-9 col-lg-7">
+                    <h3>Get in Touch</h3>
+                    <!-- RD Mailform-->
+                    <form method="post" role="form">
+                        {% csrf_token %}
+
+                        {% if reservation.errors %}
+                            <div class="alert alert-danger">
+                                {{ reservation.errors }}
+                            </div>
+                        {% endif %}
+
+                        <div class="form-wrap">
+                            {{ reservation.name }}
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-wrap">
+                            {{ reservation.phone }}
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-wrap">
+                            {{ reservation.persons }}
+                            <div class="validate"></div>
+                        </div>
+
+                        <div class="form-wrap">
+                            {{ reservation.message }}
+                            <div class="validate"></div>
+                        </div>
+
+
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-sm-7 col-lg-5">
+                                <button class="button button-block button-lg button-primary" type="submit">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
