@@ -11,3 +11,7 @@ def main_page(request):
 
 def render_typography_page(request):
     return render(request, 'typography.html', context={})
+
+
+def about_new(request):
+    return render(request, 'about.html', context={})
