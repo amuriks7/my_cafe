@@ -17,57 +17,6 @@
         </div>
     </section>
     <div class="bg-gray-1">
-        <section class="section-transform-top">
-            <div class="container">
-                <div class="box-booking">
-                    <form class="rd-form rd-mailform booking-form">
-                        {% csrf_token %}
-                        <div>
-                            <p class="booking-title">Name</p>
-                            <div class="form-wrap">
-                                <input class="form-input" id="booking-name" type="text" name="name"
-                                       data-constraints="@Required">
-                                <label class="form-label" for="booking-name">{{ reservation.name }}</label>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="booking-title">Phone</p>
-                            <div class="form-wrap">
-                                <input class="form-input" id="booking-phone" type="text" name="phone"
-                                       data-constraints="@Numeric">
-                                <label class="form-label" for="booking-phone">{{ reservation.phone }}</label>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="booking-title">Date</p>
-                            <div class="form-wrap form-wrap-icon"><span class="icon mdi mdi-calendar-text"></span>
-                                <input class="form-input" id="booking-date" type="text" name="date"
-                                       data-constraints="@Required" data-time-picker="date">
-                            </div>
-                        </div>
-                        <div>
-                            <p class="booking-title">{{ reservation.persons }}</p>
-                            <div class="form-wrap">
-                                <select data-placeholder="2">
-                                    <option label="placeholder"></option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div>
-                            <button class="button button-lg button-gray-600" type="submit">Check availability
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
         <section class="section section-lg section-inset-1 bg-gray-1 pt-lg-0">
             <div class="container">
                 <div class="row row-50 justify-content-xl-between align-items-lg-center">
@@ -114,12 +63,12 @@
                                     <img src="{{ dish.photo.url }}" alt="" width="370" height="395">
                                     <div class="product-featured-button">
 {#                                        <a#}
-{#                                                class="button button-primary" href="#">order now#}
+{#                                                class="button button-primary" href="javascript:void(0);">order now#}
 {#                                        </a>#}
                                     </div>
                                 </div>
                                 <div class="product-featured-caption">
-                                    <h4><a class="product-featured-title" href="#">{{ dish.name }}</a></h4>
+                                    <h4><a class="product-featured-title" href="javascript:void(0);">{{ dish.name }}</a></h4>
                                     <p class="big">{{ dish.price }} $</p>
                                 </div>
                             </div>
@@ -150,7 +99,7 @@
                                     {% for dish in dishes %}
                                         <div class="event-item-modern">
                                             <p class="event-time">{{ dish.price }} $</p>
-                                            <h4 class="event-item-modern-title"><a href="#">{{ dish.name }}</a></h4>
+                                            <h4 class="event-item-modern-title"><a href="javascript:void(0);">{{ dish.name }}</a></h4>
                                             <div class="event-item-modern-text">
                                                 <p>{{ dish.desc }}</p>
                                             </div>
@@ -162,7 +111,7 @@
                                 <div class="box-event-modern">
                                     <div class="event-item-modern">
                                         <p class="event-time">$20.89</p>
-                                        <h4 class="event-item-modern-title"><a href="#">Tiramisu</a></h4>
+                                        <h4 class="event-item-modern-title"><a href="javascript:void(0);">Tiramisu</a></h4>
                                         <div class="event-item-modern-text">
                                             <p>A Pesto’s favorite - classic Italian dessert made with lady fingers,
                                                 Mascarpone cheese & espresso. Perfect for both kids and adults.</p>
@@ -170,7 +119,7 @@
                                     </div>
                                     <div class="event-item-modern">
                                         <p class="event-time">$6.89</p>
-                                        <h4 class="event-item-modern-title"><a href="#">Cannoli</a></h4>
+                                        <h4 class="event-item-modern-title"><a href="javascript:void(0);">Cannoli</a></h4>
                                         <div class="event-item-modern-text">
                                             <p>Trio tower of cannoli filled with smooth ricotta, sugar & cinnamon,
                                                 with chocolate & raspberry sauces. Single cannoli is also
@@ -179,7 +128,7 @@
                                     </div>
                                     <div class="event-item-modern">
                                         <p class="event-time">$5.89</p>
-                                        <h4 class="event-item-modern-title"><a href="#">Pistachio Passion</a></h4>
+                                        <h4 class="event-item-modern-title"><a href="javascript:void(0);">Pistachio Passion</a></h4>
                                         <div class="event-item-modern-text">
                                             <p>Layered pistachio cream, cream cheese custard & whipped cream atop a
                                                 rich walnut crust.</p>
@@ -187,7 +136,7 @@
                                     </div>
                                     <div class="event-item-modern">
                                         <p class="event-time">$4.89</p>
-                                        <h4 class="event-item-modern-title"><a href="#">Chocolate-and-Pistachio
+                                        <h4 class="event-item-modern-title"><a href="javascript:void(0);">Chocolate-and-Pistachio
                                             Biscotti</a></h4>
                                         <div class="event-item-modern-text">
                                             <p>At Pesto, we vary these wonderful nutty biscotti, while also dipping
@@ -200,7 +149,7 @@
                                 <div class="box-event-modern">
                                     <div class="event-item-modern">
                                         <p class="event-time">$10.89</p>
-                                        <h4 class="event-item-modern-title"><a href="#">Aperol Spritz</a></h4>
+                                        <h4 class="event-item-modern-title"><a href="javascript:void(0);">Aperol Spritz</a></h4>
                                         <div class="event-item-modern-text">
                                             <p>The most popular drink in Venice: refreshing, easygoing &…happy!
                                                 Perfect to be sipped as an “Aperitivo” just before dinner -
@@ -209,7 +158,7 @@
                                     </div>
                                     <div class="event-item-modern">
                                         <p class="event-time">$9.89</p>
-                                        <h4 class="event-item-modern-title"><a href="#">Negroni</a></h4>
+                                        <h4 class="event-item-modern-title"><a href="javascript:void(0);">Negroni</a></h4>
                                         <div class="event-item-modern-text">
                                             <p>Reward yourself with a moment of relaxation & pure pleasure while
                                                 enjoying the full flavour & simplicity of a Negroni, an iconic
@@ -218,7 +167,7 @@
                                     </div>
                                     <div class="event-item-modern">
                                         <p class="event-time">$11.89</p>
-                                        <h4 class="event-item-modern-title"><a href="#">Negroni Sbagliato</a></h4>
+                                        <h4 class="event-item-modern-title"><a href="javascript:void(0);">Negroni Sbagliato</a></h4>
                                         <div class="event-item-modern-text">
                                             <p>A cocktail for those who prefer more delicate flavours but
                                                 nonetheless want a drink full of taste & personality.</p>
@@ -226,7 +175,7 @@
                                     </div>
                                     <div class="event-item-modern">
                                         <p class="event-time">$8.89</p>
-                                        <h4 class="event-item-modern-title"><a href="#">White Peach Bellini</a></h4>
+                                        <h4 class="event-item-modern-title"><a href="javascript:void(0);">White Peach Bellini</a></h4>
                                         <div class="event-item-modern-text">
                                             <p>White Peach Bellini is a classic drink from Venice Italy of white
                                                 peach purée and Prosecco. It is one of our most popular drinks at
@@ -315,100 +264,96 @@
             <div class="owl-carousel wow fadeInUp" data-items="1" data-md-items="2" data-lg-items="3"
                  data-dots="true" data-nav="false" data-stage-padding="15" data-loop="false" data-margin="30"
                  data-mouse-drag="false">
-                <div class="post-corporate"><a class="badge" href="#">Jul 02, 2019</a>
-                    <h4 class="post-corporate-title"><a href="#">Genuine Italian Pizza: Authenticity and Choice</a>
+                <div class="post-corporate"><a class="badge" href="javascript:void(0);">Jul 02, 2019</a>
+                    <h4 class="post-corporate-title"><a href="javascript:void(0);">Genuine Italian Pizza: Authenticity and Choice</a>
                     </h4>
                     <div class="post-corporate-text">
                         <p>As an Italian restaurant, we are very proud of our delicious authentic pizzas. Our three
                             most popular choices are the Rustica, the Toscana and...</p>
                     </div>
-                    <a class="post-corporate-link" href="#">Read more<span
+                    <a class="post-corporate-link" href="javascript:void(0);">Read more<span
                             class="icon linearicons-arrow-right"></span></a>
                 </div>
-                <div class="post-corporate"><a class="badge" href="#">Jul 12, 2019</a>
-                    <h4 class="post-corporate-title"><a href="#">Italian vs. American Spaghetti: Top 5
+                <div class="post-corporate"><a class="badge" href="javascript:void(0);">Jul 12, 2019</a>
+                    <h4 class="post-corporate-title"><a href="javascript:void(0);">Italian vs. American Spaghetti: Top 5
                         Differences</a></h4>
                     <div class="post-corporate-text">
                         <p>Commonly, when we hear there is spaghetti for dinner we will be expecting a red tomato
                             sauce with meat and seasonings poured over long...</p>
                     </div>
-                    <a class="post-corporate-link" href="#">Read more<span
+                    <a class="post-corporate-link" href="javascript:void(0);">Read more<span
                             class="icon linearicons-arrow-right"></span></a>
                 </div>
-                <div class="post-corporate"><a class="badge" href="#">aug 02, 2019</a>
-                    <h4 class="post-corporate-title"><a href="#">The Delicious History of Lasagna and Its
+                <div class="post-corporate"><a class="badge" href="javascript:void(0);">aug 02, 2019</a>
+                    <h4 class="post-corporate-title"><a href="javascript:void(0);">The Delicious History of Lasagna and Its
                         Origins</a></h4>
                     <div class="post-corporate-text">
                         <p>Lasagna, could there be a more perfect dish? It’s comfort food on steroids. Layers of
                             cheese generously piled on top of decadent amounts...</p>
                     </div>
-                    <a class="post-corporate-link" href="#">Read more<span
+                    <a class="post-corporate-link" href="javascript:void(0);">Read more<span
                             class="icon linearicons-arrow-right"></span></a>
                 </div>
-                <div class="post-corporate"><a class="badge" href="#">Aug 15, 2019</a>
-                    <h4 class="post-corporate-title"><a href="#">Making Gelato Like a True Italian: Tips From Our
+                <div class="post-corporate"><a class="badge" href="javascript:void(0);">Aug 15, 2019</a>
+                    <h4 class="post-corporate-title"><a href="javascript:void(0);">Making Gelato Like a True Italian: Tips From Our
                         Chef</a></h4>
                     <div class="post-corporate-text">
                         <p>Most would agree that gelato is the most delicious frozen dessert; the perfect ending to
                             any meal. With origins in Sicily, gelato has been made famous...</p>
                     </div>
-                    <a class="post-corporate-link" href="#">Read more<span
+                    <a class="post-corporate-link" href="javascript:void(0);">Read more<span
                             class="icon linearicons-arrow-right"></span></a>
                 </div>
-                <div class="post-corporate"><a class="badge" href="#">Sep 15, 2019</a>
-                    <h4 class="post-corporate-title"><a href="#">Italian Ingredients You Can Easily Grow at Home</a>
+                <div class="post-corporate"><a class="badge" href="javascript:void(0);">Sep 15, 2019</a>
+                    <h4 class="post-corporate-title"><a href="javascript:void(0);">Italian Ingredients You Can Easily Grow at Home</a>
                     </h4>
                     <div class="post-corporate-text">
                         <p>Imagine preparing an Italian dinner but having to stop cooking because you forget an
                             ingredient and must run to the store. How nice would it be to go...</p>
                     </div>
-                    <a class="post-corporate-link" href="#">Read more<span
+                    <a class="post-corporate-link" href="javascript:void(0);">Read more<span
                             class="icon linearicons-arrow-right"></span></a>
                 </div>
-                <div class="post-corporate"><a class="badge" href="#">Sep 28, 2019</a>
-                    <h4 class="post-corporate-title"><a href="#">Our Brief Guide to Pairing Wine and Pasta the Right
+                <div class="post-corporate"><a class="badge" href="javascript:void(0);">Sep 28, 2019</a>
+                    <h4 class="post-corporate-title"><a href="javascript:void(0);">Our Brief Guide to Pairing Wine and Pasta the Right
                         Way</a></h4>
                     <div class="post-corporate-text">
                         <p>To Italians, pasta is the food of the gods, and there is nothing better to go with a good
                             pasta than a perfect wine. To the uninitiated, finding the right...</p>
                     </div>
-                    <a class="post-corporate-link" href="#">Read more<span
+                    <a class="post-corporate-link" href="javascript:void(0);">Read more<span
                             class="icon linearicons-arrow-right"></span></a>
                 </div>
-                <div class="post-corporate"><a class="badge" href="#">Oct 05, 2019</a>
-                    <h4 class="post-corporate-title"><a href="#">Top 10 Famous Spring Dishes in Italian
+                <div class="post-corporate"><a class="badge" href="javascript:void(0);">Oct 05, 2019</a>
+                    <h4 class="post-corporate-title"><a href="javascript:void(0);">Top 10 Famous Spring Dishes in Italian
                         Restaurants</a></h4>
                     <div class="post-corporate-text">
                         <p>Spring is the time for growth and rebirth. One can see this throughout the countrysides
                             of Italy with blooming flowers and budding trees. Springtime is...</p>
                     </div>
-                    <a class="post-corporate-link" href="#">Read more<span
+                    <a class="post-corporate-link" href="javascript:void(0);">Read more<span
                             class="icon linearicons-arrow-right"></span></a>
                 </div>
-                <div class="post-corporate"><a class="badge" href="#">Oct 17, 2019</a>
-                    <h4 class="post-corporate-title"><a href="#">What Makes Some Seasonings Truly Italian?</a></h4>
+                <div class="post-corporate"><a class="badge" href="javascript:void(0);">Oct 17, 2019</a>
+                    <h4 class="post-corporate-title"><a href="javascript:void(0);">What Makes Some Seasonings Truly Italian?</a></h4>
                     <div class="post-corporate-text">
                         <p>When thinking of Italian cuisine, dishes like pasta enveloped in hearty sauces come to
                             mind. Certain flavors seem to be found across the different...</p>
                     </div>
-                    <a class="post-corporate-link" href="#">Read more<span
+                    <a class="post-corporate-link" href="javascript:void(0);">Read more<span
                             class="icon linearicons-arrow-right"></span></a>
                 </div>
-                <div class="post-corporate"><a class="badge" href="#">Nov 10, 2019</a>
-                    <h4 class="post-corporate-title"><a href="#">Types of Italian Sausage and Why They Are
+                <div class="post-corporate"><a class="badge" href="javascript:void(0);">Nov 10, 2019</a>
+                    <h4 class="post-corporate-title"><a href="javascript:void(0);">Types of Italian Sausage and Why They Are
                         Different</a></h4>
                     <div class="post-corporate-text">
                         <p>There are many types of Italian sausage. The main difference in Italian sausage when
                             compared to other sausages is the seasoning. The particular...</p>
                     </div>
-                    <a class="post-corporate-link" href="#">Read more<span
+                    <a class="post-corporate-link" href="javascript:void(0);">Read more<span
                             class="icon linearicons-arrow-right"></span></a>
                 </div>
             </div>
         </div>
     </section>
-    <a class="section section-banner" href="https://www.templatemonster.com/website-templates/monstroid2.html"
-       style="background-image: url(static/images/banner/background-03-1920x310.jpg); background-image: -webkit-image-set( url(static/images/banner/background-03-1920x310.jpg) 1x, url(static/images/banner/background-03-3840x620.jpg) 2x )"><img
-            src={% static 'images/banner/foreground-03-1600x310.png' %} srcset={% static 'images/banner/foreground-03-1600x310.png' %}
-            1x, images/banner/foreground-03-3200x620.png 2x" alt="" width="1600" height="310"></a>
 {% endblock %}

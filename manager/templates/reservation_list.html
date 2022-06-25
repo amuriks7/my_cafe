@@ -2,12 +2,7 @@
 {% load static %}
 
 {% block content %}
-
-    <section class="parallax-container overlay-1" data-parallax-img="{% static 'images/breadcrumbs.jpg' %}">
-        <div class="material-parallax parallax">
-            <img src="{% static 'images/breadcrumbs.jpg' %} " alt=""
-                 style="transform: translate3d(-50%, 131px, 0px); display: block;">
-        </div>
+    <section class="parallax-container overlay-1">
         <div class="parallax-content breadcrumbs-custom context-dark">
             <div class="container">
                 <div class="row justify-content-center">
@@ -39,7 +34,7 @@
                     <div class="box-icon-classic">
                         <div class="box-icon-inner decorate-circle"><span class="icon-xl linearicons-map2"></span></div>
                         <div class="box-icon-caption">
-                            <h4><a href="#">51 Francis Street, San Diego, CA 91702 United States</a></h4>
+                            <h4><a href="javascript:void(0);">51 Francis Street, San Diego, CA 91702 United States</a></h4>
                         </div>
                     </div>
                 </div>
@@ -61,7 +56,7 @@
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col-md-9 col-lg-7">
-                    <h3>Get in Touch</h3>
+                    <h3 id="get-it-touch">Get in Touch</h3>
                     <!-- RD Mailform-->
                     <form method="post" role="form">
                         {% csrf_token %}
