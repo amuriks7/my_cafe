@@ -90,6 +90,16 @@ DB_USER = os.environ.get('DB_USER', 'logjxxopheumab')
 DB_PASSWORD = os.environ.get('DB_PASSWORD', '7ed7773f1f0649d9e50d9434ee3f41970be455fee1d557a20c33a41d653501fc')
 DB_HOST = os.environ.get('DB_HOST', 'ec2-34-248-169-69.eu-west-1.compute.amazonaws.com')
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': 5432,
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
