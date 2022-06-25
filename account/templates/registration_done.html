@@ -1,0 +1,21 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="parallax-container overlay-1" style="min-height: 300px;"  data-parallax-img="{% static 'images/breadcrumbs.jpg' %}">
+        <div class="material-parallax parallax">
+            <img src="{% static 'images/breadcrumbs.jpg' %} " alt=""
+                 style="transform: translate3d(-50%, 131px, 0px); display: block;">
+        </div>
+        <div class="container">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1 class="display-4">Привет, {{ new_user.username }}</h1>
+                        <p>Вы зарегистрированы в системе. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+    <section class="parallax-container overlay-1" style="min-height: 300px;"
+             data-parallax-img="{% static 'images/breadcrumbs.jpg' %}">
+        <div class="material-parallax parallax">
+            <img src="{% static 'images/breadcrumbs.jpg' %} " alt=""
+                 style="transform: translate3d(-50%, 131px, 0px); display: block;">
+        </div>
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Войти</h3>
+            </div>
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form action="" method="post" style="margin-top: 100px;">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <input type="submit" value="Войти">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
