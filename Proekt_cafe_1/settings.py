@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%h67w)ervz%+*sp*19d)+-_g=q#7k!d&0)t_phu#%g=5jkl*t-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['pesto-italian-food.herokuapp.com', '127.0.0.1']
 
@@ -86,18 +86,13 @@ WSGI_APPLICATION = 'Proekt_cafe_1.wsgi.application'
 #     }
 # }
 
-DB_NAME = os.environ.get('DB_NAME', 'd58nfpj5390q7b')
-DB_USER = os.environ.get('DB_USER', 'logjxxopheumab')
-DB_PASSWORD = os.environ.get('DB_PASSWORD', '7ed7773f1f0649d9e50d9434ee3f41970be455fee1d557a20c33a41d653501fc')
-DB_HOST = os.environ.get('DB_HOST', 'ec2-34-248-169-69.eu-west-1.compute.amazonaws.com')
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': DB_NAME,
-        'USER': DB_USER,
-        'PASSWORD': DB_PASSWORD,
-        'HOST': DB_HOST,
+        'NAME': os.environ.get('DB_NAME', 'd58nfpj5390q7b'),
+        'USER': os.environ.get('DB_USER', 'logjxxopheumab'),
+        'PASSWORD':  os.environ.get('DB_PASSWORD', '7ed7773f1f0649d9e50d9434ee3f41970be455fee1d557a20c33a41d653501fc'),
+        'HOST': os.environ.get('DB_HOST', 'ec2-34-248-169-69.eu-west-1.compute.amazonaws.com'),
         'PORT': 5432,
     }
 }
