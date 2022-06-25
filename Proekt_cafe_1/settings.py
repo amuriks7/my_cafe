@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%h67w)ervz%+*sp*19d)+-_g=q#7k!d&0)t_phu#%g=5jkl*t-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pesto-italian-food.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -78,12 +78,17 @@ WSGI_APPLICATION = 'Proekt_cafe_1.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+DB_NAME = os.environ.get('DB_NAME', 'd58nfpj5390q7b')
+DB_USER = os.environ.get('DB_USER', 'logjxxopheumab')
+DB_PASSWORD = os.environ.get('DB_PASSWORD', '7ed7773f1f0649d9e50d9434ee3f41970be455fee1d557a20c33a41d653501fc')
+DB_HOST = os.environ.get('DB_HOST', 'ec2-34-248-169-69.eu-west-1.compute.amazonaws.com')
 
 
 # Password validation
