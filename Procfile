@@ -1,1 +1,1 @@
-web: gunicorn cafe.wsgi --log-file -
+web: gunicorn Proekt_cafe_1.wsgi --log-file -
